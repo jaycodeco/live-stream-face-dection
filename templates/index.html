@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Live Streaming Demonstration</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: #252531;
+            display: block;
+        }
+
+        section.container{
+            width: 100%;
+            height: 100%;
+            background: #5da5c600;
+            z-index: 1;
+        }
+
+        .container .wrapper{
+            width:50%;
+            background: #251235;
+            margin:auto;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            padding-bottom: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.356);
+        }
+
+        .wrapper h1{
+            font-family: sans-serif;
+            color: #FFF;
+            background: #258551;
+            text-align: center;
+        }
+        .wrapper img{
+            width: 80%;
+            aspect-ratio: 1/1;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <div class="wrapper">
+        <h1>Live Stream Face Detection {{ +1}}</h1>
+        <img src="{{ url_for('video_feed') }}" width="30%"/>
+    </div>
+</section>
+</body>
+</html>
